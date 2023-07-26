@@ -2,8 +2,18 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
 
-   #device gem
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :user_name => '81ce1510a4062d',
+  :password => ENV["mailtrap_user"],
+  :address => ENV["mailtrap_pass"],
+  :host => 'sandbox.smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
+
 
   # Settings specified here will take precedence over those in config/application.rb.
 

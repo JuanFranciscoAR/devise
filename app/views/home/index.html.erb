@@ -1,0 +1,8 @@
+
+    <div class= "container ps-5 pe-5 ms-5 me-5"> 
+        <% if user_signed_in? %>
+            <h1 class= " ps-5 pe-5 ms-5 me-5">Bienvenido <%= current_user.email %> </h1>
+        <% else %>
+            <h1 class= " ps-5 pe-5 ms-5 me-5">Registrate o inicia sesión para comentar </h1>
+        <%end%>
+    </div>

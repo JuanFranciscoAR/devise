@@ -15,6 +15,8 @@ gem "pg", "~> 1.1"
 # Devise
 gem "devise"
 
+gem "faker"
+
 gem "figaro"
 
 # Use the Puma web server [https://github.com/puma/puma]
